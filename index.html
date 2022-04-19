@@ -4,8 +4,10 @@
         <title>GlazAR тест</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         
+        <link href="popup.style.css" rel="stylesheet">
+        
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
    
@@ -49,6 +51,28 @@
 
             <a-camera gps-camera rotation-reader></a-camera>
         </a-scene>
+ <div class="wrap">
+	<h1>Всплывающие окна.</h1>
+
+	<div class="btn-box">
+		<h2>Анимация CSS3 slideInDown и slideOutUp.</h2>
+		<button type="button" class="btn btn-default" data-modal="modal_1">Показать popup 1</button>
+		<button type="button" class="btn btn-success" data-modal="modal_2">Показать popup 2</button>
+	</div>
+
+	<div class="overlay" data-close=""></div>
+
+	<div id="modal_1" class="dlg-modal dlg-modal-slide">
+		<span class="closer" data-close=""></span>
+		<h3>Всплывающее окно 1</h3>
+	</div>
+	<div id="modal_2" class="dlg-modal dlg-modal-slide">
+		<span class="closer" data-close=""></span>
+		<h3>Всплывающее окно 2</h3>
+	</div>
+</div>
+<script>var typeAnimate = 'slide';</script>
+<script src="popup.function.js"></script>
     </body>
 </html>
 
